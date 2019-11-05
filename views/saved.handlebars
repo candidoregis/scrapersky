@@ -1,0 +1,56 @@
+<div class="row">
+  {{#unless articles}}
+    <hr>
+    <p class="center">There are no articles saved!</p>
+    <hr>
+  {{/unless}}
+
+  {{#each articles}}
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-content card-content-title">
+          <span class="card-title"><a href="{{url}}" target="_blank">{{title}}</a></span>
+        </div>
+        <div class="card-content card-content-summary">
+          <p>{{summary}}</p>
+        </div>
+        <div class="card-content card-content-saveit center">
+          <a data-id="{{_id}}" class="btn modal-trigger" href="#modal-{{_id}}">
+            <i class="material-icons right">chat</i>Comments here!</a>
+          <a href="#" data-id="{{_id}}" class="btn btn-del-article">
+            <i class="material-icons right">delete</i>Delete Article</a>
+        </div>
+      </div>
+    </div>
+
+    {{!-- COMMENTS' MODAL --}}
+
+    <div id="modal-{{_id}}" class="modal modal-fixed-footer">
+      <div class="modal-display col s12 m12">
+        <div class="card modal-card-display">
+          <div class="card-content card-content-title">
+            <h2><i class="material-icons">comment</i> {{title}} </h2>
+          </div>
+          <div class="card-content card-content-summary">
+            <div class="modal-main wrap-comments">
+
+              {{#each comments}}
+                <p style="margin-bottom: 5px;">
+                  <a data-id="{{_id}}" data-article-id="{{../_id}}" class="btn btn-small"> <i
+                      class="material-icons btn-del-comment">clear</i></a>
+                  {{comment}}
+                </p>
+              {{/each}}
+              
+            </div>
+          </div>
+          <div class="card-content card-content-comment fixed-bottom center">
+            <input type="text" placeholder="Comments here!" class="comment center">
+              <a href="#!" class="btn btn-add-comment"><i class="material-icons right">add_box</i>SEND</a>
+              <a href="#!" class="btn modal-close"><i class="material-icons right">clear</i>CLOSE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

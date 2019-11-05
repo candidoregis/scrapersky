@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap');
+
+* {
+  font-family: 'Playfair Display', cursive;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #007EA7;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav {
+  background-color: #00171F;
+}
+
+.nav-wrapper{
+  padding: 1em;
+}
+
+.logo {
+  margin-left: 30px;
+  font-size: 2.5em;
+}
+
+.page-footer {
+  text-align: center;
+  background-color: #00171F;
+}
+
+h5 {
+  color: #00171F;
+  font-size: 4em;
+}
+
+p {
+  color: #00171F;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card-content-title {
+  color: #00171F;
+  background-color: #003459;
+}
+
+a:hover {
+  color: #FFFFFF;
+}
+
+.card-content-summary {
+  color: #00171F;
+  background-color: #FFFFFF;
+}
+
+.card-content-saveit {
+  padding: 0px 0px 1em 0px !important;
+}
+
+.card-content-comment {
+  padding: 5px !important;
+}
+
+.btn-save-article {
+  background-color: #00A8E8;
+}
+
+.btn-save-article:hover {
+  background-color: #007EA7;
+}
+
+.btn {
+  background-color: #00A8E8;
+}
+
+.btn:hover {
+  background-color: #007EA7;
+}
+
+.btn-del {
+  background-color: #00A8E8;
+}
+
+.btn-del-article:hover {
+  background-color: rgb(167, 20, 0);
+}
+
+.modal-header {
+  color: #FFFFFF;
+  background-color: #00171F;
+  padding: 10px;
+  font-size: 1.2em;
+  width: auto;
+}
+
+.modal-main {
+  padding: 10px;
+  width: auto;
+}
+
+.btn-del-comment {
+  color: #007EA7;
+}
+
+.btn-del-comment:hover {
+  color: rgb(167, 20, 0);
+}
+
+.modal-main>p>a.btn-small, a.btn-small:hover {
+  padding: 0px 0.5em;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.modal-display, .modal-card-display {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+input {
+  background-color: transparent !important;
+  font-family: 'Times New Roman', Times, serif !important;
+  border-top: 1px solid #DDDDDD !important;
+  margin: 3px !important;
+  width: 95% !important;
+  color: #003459 !important;
+}
+
+input:focus {
+  border: 0px !important;
+  border-bottom: 2px solid #007EA7 !important;
+  margin: 3px !important;
+  outline: #007EA7;
+}
+
+.comment-btn {
+  bottom: 15px;
+}
+
+.wrap-comments {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}

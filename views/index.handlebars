@@ -1,0 +1,24 @@
+<div class="row" id="articles">
+  {{#unless articles}}
+  <hr>
+  <p class="center">There are no articles scraped!</p>
+  <hr>
+  {{/unless}}
+
+  {{#each articles}}
+  <div class="col s12 m12">
+    <div class="card">
+      <div class="card-content card-content-title">
+        <span class="card-title"><a href="{{url}}" target="_blank">{{title}}</a></span>
+      </div>
+      <div class="card-content card-content-summary">
+        <p>{{summary}}</p>
+      </div>
+      <div class="card-content card-content-saveit center">
+        <a href="#" data-id="{{_id}}" class="btn btn-save-article">Save for later!</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+</div>
